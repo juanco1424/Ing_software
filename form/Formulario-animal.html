@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Datos de la Mascota</title>
+    <link rel="stylesheet" href="../css/style-animal.css">
+    <script defer src="../js/formulario-animal.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <h2>Datos de la mascota</h2>
+        <form id="mascotaForm">
+            <div class="photo-section">
+                <div class="photo-placeholder" id="photoPreview"></div>
+                <button type="button" class="photo-upload" id="uploadButton">Cargar la foto</button>
+                <input type="file" id="photoInput" accept="image/*" style="display: none;">
+            </div>
+            
+            <div class="input-section">
+                <label for="nombre">Nombre</label>
+                <input type="text" id="nombre">
+                <span class="error-message" id="error-nombre"></span>
+
+                <label for="especie">Especie</label>
+                <input type="text" id="especie">
+                <span class="error-message" id="error-especie"></span>
+
+                <label for="habitat">Habitat</label>
+                <select id="habitat">
+                    <option value="">Seleccione</option>
+                    <option value="domestico">Doméstico</option>
+                    <option value="salvaje">Salvaje</option>
+                </select>
+                <span class="error-message" id="error-habitat"></span>
+
+                <label for="fechaNacimiento">Fecha de nacimiento</label>
+                <input type="date" id="fechaNacimiento">
+                <span class="error-message" id="error-fechaNacimiento"></span>
+
+                <label for="tipoComida">Tipo de comida</label>
+                <select id="tipoComida">
+                    <option value="">Seleccione</option>
+                    <option value="seco">Seco</option>
+                    <option value="humedo">Húmedo</option>
+                    <option value="mixto">Mixto</option>
+                </select>
+                <span class="error-message" id="error-tipoComida"></span>
+
+                <label for="genero">Género</label>
+                <select id="genero">
+                    <option value="">Seleccione</option>
+                    <option value="macho">Macho</option>
+                    <option value="hembra">Hembra</option>
+                </select>
+                <span class="error-message" id="error-genero"></span>
+
+                <label for="peso">Peso</label>
+                <input type="number" id="peso" step="0.1">
+                <span class="error-message" id="error-peso"></span>
+
+                <label for="vacunas">Vacunas</label>
+                <input type="text" id="vacunas" placeholder="Ingrese separadas por coma">
+
+                <label for="alergias">Alergias</label>
+                <input type="text" id="alergias" placeholder="Ingrese separadas por coma">
+
+                <label for="enfermedades">Enfermedades</label>
+                <input type="text" id="enfermedades" placeholder="Ingrese separadas por coma">
+
+                <label for="medicamentos">Medicamentos</label>
+                <input type="text" id="medicamentos" placeholder="Ingrese separadas por coma">
+
+                <label for="recomendaciones">Recomendaciones</label>
+                <textarea id="recomendaciones"></textarea>
+
+                <label for="documentos">Adjuntar documentos</label>
+                <input type="file" id="documentos" multiple>
+            </div>
+
+            <div class="button-section">
+                <button type="button" onclick="cancelForm()">Cancel</button>
+                <button type="submit">Save</button>
+            </div>
+        </form>
+    </div>
+</body>
+
+</html>
